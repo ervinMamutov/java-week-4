@@ -1,5 +1,7 @@
 package exceptions.exercises;
 
+import java.util.Scanner;
+
 /**
  * Exercise 3:
  * Ask the user to enter a number.
@@ -7,12 +9,16 @@ package exceptions.exercises;
  * Catch NumberFormatException if the user enters invalid input.
  */
 
-import java.util.Scanner;
+public class Exercise3 {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Input number");
+    String answer = scanner.next();
 
-public class Exercise3
-{
-    public static void main(String[] args)
-    {
-
+    try {
+      System.out.println(Integer.parseInt(answer));
+    } catch (NumberFormatException e) {
+      System.out.println("This is not a number");
     }
+  }
 }

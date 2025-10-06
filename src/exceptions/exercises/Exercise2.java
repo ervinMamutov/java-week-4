@@ -8,12 +8,17 @@ package exceptions.exercises;
  * Print an appropriate message instead of crashing.
  */
 
-import java.util.Scanner;
+public class Exercise2 {
+  public static void main(String[] args) {
 
-public class Exercise2
-{
-    public static void main(String[] args)
-    {
+    int[] array = {1, 2, 3, 4, 5};
 
+    int index = 6;
+
+    try {
+      System.out.println(array[index]);
+    } catch (ArrayIndexOutOfBoundsException e) {
+      System.out.println("The index out of range");
     }
+  }
 }
