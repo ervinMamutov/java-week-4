@@ -6,11 +6,11 @@ import java.util.List;
 public class Movie {
   private final String title;
   private final String genre;
-  private final int year;
+  private final String year;
   private final List<Director> directors;
   private final List<Actor> actors;
 
-  public Movie(String title, String genre, int year) {
+  public Movie(String title, String genre, String year) {
     this.title = title;
     this.genre = genre;
     this.year = year;
@@ -27,7 +27,7 @@ public class Movie {
     return genre;
   }
 
-  public int getMovieYear() {
+  public String getMovieYear() {
     return year;
   }
 

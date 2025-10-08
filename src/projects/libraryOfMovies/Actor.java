@@ -5,8 +5,6 @@ public class Actor {
 
   public Actor(String name) {
     this.name = name;
-
-
   }
 
   public String getName() {

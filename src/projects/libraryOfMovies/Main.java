@@ -13,13 +13,13 @@ package projects.libraryOfMovies;
 
 public class Main {
   public static void main(String[] args) {
-    Movie m1 = new Movie("title1", "genre", 2024);
+    Movie m1 = new Movie("title1", "genre", "2024");
     Director director1 = new Director("director1");
     Actor actor1 = new Actor("actor1");
     m1.addDirector(director1);
     m1.addActor(actor1);
 
-    Movie m2 = new Movie("title2", "genre2", 2023);
+    Movie m2 = new Movie("title2", "genre2", "2023");
     Director director2 = new Director("director2");
     Actor actor2 = new Actor("actor2");
     Actor actor3 = new Actor("actor3");
@@ -31,14 +31,26 @@ public class Main {
 
     MoviesCollection col1 = new MoviesCollection();
     col1.addMoviesCollection(m1);
+
+    col1.showMovies();
+
     col1.addMoviesCollection(m2);
     col1.showMovies();
 
-    col1.searchByGenre("genre");
-    System.out.println();
+    System.out.println("Show2");
+    col1.showResult(col1.filterMap("director1"));
 
-    col1.searchByDirector("director2");
+    System.out.println("Show2");
+    col1.showResult(col1.filterMap("actor1"));
 
+    System.out.println("One Show2");
+    col1.showResult(col1.filterMap("actor2"));
+
+    System.out.println("One genre");
+    col1.showResult(col1.filterMap("genre"));
+
+    System.out.println("One genre");
+    col1.showResult(col1.filterMap("2024"));
 
   }
 }
