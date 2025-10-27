@@ -25,11 +25,8 @@ public class MoviesCollection {
     
 
     moviesCollection.forEach((title, movie) -> {
-      boolean isMatch = false;;
+      boolean isMatch = Objects.equals(movie.getMovieGenre(), word);
 
-      if (Objects.equals(movie.getMovieGenre(), word)) {
-        isMatch = true;
-      }
       if (Objects.equals(movie.getMovieYear(), word)) {
         isMatch = true;
       }
